@@ -1,0 +1,113 @@
+/* 
+  Localizable.strings
+  Live It
+
+  Created by Muniyaraj on 19/08/24.
+  
+*/
+
+"login" = "تسجيل الدخول";
+"dont_have_ac" = "ليس لديك حساب؟";
+"signup" = "اشتراك";
+
+"spotlight_your_talent" = "سلط الضوء على موهبتك";
+"grow_your_audience" = "قم بتنمية جمهورك وتواصل مباشرة. مسرحك، جمهورك.";
+
+"start_instantly" = "ابدأ على الفور";
+"no_minimum_audience" = "لا يلزم وجود حد أدنى من الجمهور لبدء رحلة البث المباشر.";
+
+"exclusive_access" = "الوصول الحصري";
+"getup_close_with_special" = "اقترب من تجارب البث المباشر الخاصة. كن أكثر من مجرد مشاهد.";
+
+"discover_new_trends" = "اكتشاف الاتجاهات الجديدة";
+"unique_creators_diverse_content" = "مبدعون فريدون، محتوى متنوع. عالم جديد عند كل نقرة.";
+
+"monetize_your_way" = "الربح بطريقتك";
+"choose_how_you_earn" = "اختر الطريقة التي تكسب بها - الاشتراكات وردود الفعل المباشرة والمحتوى الحصري والتسوق المباشر.";
+
+"sign_up" = "اشتراك";
+"alerady_have_ac" = "هل لديك حساب بالفعل؟";
+
+"phone_or_email" = "رقم الهاتف أو عنوان البريد الإلكتروني";
+"live_it" = "عشها";
+"happly_to_have_here" = "سعيد بوجودك هنا!";
+
+"enter_6_digit" = "أدخل الرمز المكون من 6 أرقام";
+"code_sent_to_num" = "تم إرسال الرمز الخاص بك إلى []";
+"resend_code" = "إعادة إرسال الرمز";
+"second" = "ثانية";
+"seconds" = "ثواني";
+"remain_to_resend" = "باقي لإعادة إرسال الرمز";
+
+"confirm_birthday" = "تأكيد تاريخ ميلادك";
+
+"continue" = "يكمل";
+"date_of_birth" = "تاريخ الميلاد";
+"confirm_dob" = "تأكيد تاريخ ميلادك";
+"yes_its_correct" = "نعم، هذا يبدو صحيحا!";
+"need_make_changes" = "أنا بحاجة إلى إجراء تغييرات";
+
+"confirm_dob" = "تأكيد تاريخ الميلاد";
+"confirm_dob_alert_msg" = "بعد التأكيد، لن تتمكن من تغيير تاريخ ميلادك";
+"cancel" = "يلغي";
+"you_must_18_or_older" = "يجب أن يكون عمرك 18 عامًا أو أكثر لاستخدام تطبيقنا";
+"by_verify_age" = "من خلال التحقق من عمرك، فإنك تساعدنا في تخصيص تجربتك، والحفاظ على مجتمع آمن، وإظهار المحتوى المناسب لعمرك. ولن يتم عرض هذا للعامة.";
+
+"access_denied" = "تم الرفض";
+"our_community_guideliness" = "تشترط إرشادات مجتمعنا أن يكون عمر جميع المستخدمين 13 عامًا على الأقل. ولسوء الحظ، أنت لا تستوفي معاييرنا العمرية.";
+
+"greeting_message" = "مرحبًا بكم في تجربة فينيفيا!";
+"thanks_for_join_us" = "شكرًا لانضمامك إلينا! ستجد هنا عالمًا من المحتوى المُصمم خصيصًا لك. فلنبدأ رحلتك المثيرة!";
+
+"welcome_user" = "مرحباً، []!";
+"congrats_verified_creator" = "تهانينا، لقد تم التحقق من أنك منشئ محتوى على Vinivia! أنت الآن جزء من مجتمع منشئي المحتوى الحصري لدينا. تأكد من تحميل صورة الملف الشخصي للتأكد من أن جمهورك يعرف من أنت!";
+
+"congrats_parts_of_community" = "تهانينا، أنت الآن جزء من مجتمع منشئي المحتوى الحصري لدينا! تواصل مع جمهور جذاب وابني مجتمعك!";
+
+"what_first_name" = "ما هو اسمك الأول؟";
+"first_name" = "الاسم الأول";
+"enter_your_name" = "أدخل اسمك";
+"next_add_last_name" = "التالي، أضف اسمك الأخير";
+
+"what_last_name" = "ما هو اسمك الأخير؟";
+"last_name" = "اسم العائلة";
+"next_create_user_name" = "التالي، قم بإنشاء اسم مستخدم";
+
+"create_user_name" = "إنشاء اسم مستخدم";
+"user_name" = "اسم المستخدم";
+"enter_user_name" = "أدخل اسم المستخدم الخاص بك";
+"next_upload_picture" = "التالي، قم بتحميل الصورة";
+
+"name_must_contain_atleast_characters" = "[] يجب أن يحتوي على {} حرفًا على الأقل";
+"please_make_your_username_shorter" = "من فضلك اجعل [] أقصر.";
+"please enter_shorter_" = "الرجاء إدخال أقصر [)";
+"cannot_contain_uppercase" = "[] لا يمكن أن يحتوي على أحرف كبيرة";
+"username_allowed_chars" = "يمكن لأسماء المستخدمين استخدام الأحرف والأرقام والشرطات السفلية (_) والنقاط (.) فقط.";
+
+"personalize_profile" = "تخصيص ملف التعريف الخاص بك";
+"express_yourself" = "عبر عن نفسك";
+"connect_authentically" = "تواصل بشكل أصيل مع الآخرين من خلال تحميل صورة رائعة لنفسك.";
+"next_follow_creator" = "التالي، اتبع المبدعين";
+"upload_another_pic" = "تحميل صورة أخرى";
+"fantastic" = "رائع!";
+"all_set_continue" = "أنتم جاهزون للاستمرار";
+"upload_picture" = "تحميل الصورة";
+"later" = "لاحقاً";
+
+"save" = "يحفظ";
+
+"follow_our_creator" = "اتبع المبدعين لدينا";
+"follow_all" = "متابعة الكل";
+"next_select_interest" = "التالي، حدد اهتماماتك";
+"skip" = "يتخطى";
+
+"pick_categories_interest" = "اختر الفئات التي تهمك";
+"next_fill_profile" = "التالي، املأ ملفك الشخصي";
+
+"select_your_interest" = "اختر اهتماماتك";
+"choose_category_intro" = "اختر فئة محتوى واحدة على الأقل لتخصيص تجربة تطبيقك وتلقي المحتوى ذي الصلة.";
+"seemore" = "شاهد المزيد";
+"seeless" = "انظر أقل";
+
+"follow" = "يتبع";
+"unfollow" = "إلغاء المتابعة";

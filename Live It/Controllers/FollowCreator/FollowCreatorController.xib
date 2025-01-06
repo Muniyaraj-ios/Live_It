@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FollowCreatorController" customModule="Do_it_live" customModuleProvider="target">
+            <connections>
+                <outlet property="nextSelectBtn" destination="K8O-F6-QNe" id="uRU-4B-PIC"/>
+                <outlet property="skipBtn" destination="7ij-eC-HuG" id="WQT-sa-wrl"/>
+                <outlet property="tabeleView" destination="MWX-w8-mOM" id="fMB-uW-1zg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-w8-mOM">
+                    <rect key="frame" x="0.0" y="59" width="393" height="612"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-G6-ygz" customClass="CustomCornerShadowView" customModule="Do_it_live" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="671" width="393" height="147"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qsp-CQ-kCV">
+                            <rect key="frame" x="20" y="26" width="353" height="115"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8O-F6-QNe" customClass="LoadingButton" customModule="Do_it_live" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="55"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="55" id="ufx-tN-bWA"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ij-eC-HuG" customClass="DefaultButton" customModule="Do_it_live" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60" width="353" height="55"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="qsp-CQ-kCV" firstAttribute="leading" secondItem="DZu-G6-ygz" secondAttribute="leading" constant="20" id="KZM-fV-vW1"/>
+                        <constraint firstAttribute="trailing" secondItem="qsp-CQ-kCV" secondAttribute="trailing" constant="20" id="MJQ-Yx-qzF"/>
+                        <constraint firstAttribute="bottom" secondItem="qsp-CQ-kCV" secondAttribute="bottom" constant="6" id="b46-zQ-ekJ"/>
+                        <constraint firstItem="qsp-CQ-kCV" firstAttribute="top" secondItem="DZu-G6-ygz" secondAttribute="top" constant="26" id="imo-pZ-b6J"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MWX-w8-mOM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1ol-Wd-QAZ"/>
+                <constraint firstItem="MWX-w8-mOM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3ss-iC-ngw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MWX-w8-mOM" secondAttribute="trailing" id="5ni-PT-LRX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DZu-G6-ygz" secondAttribute="bottom" id="8GQ-ji-rGG"/>
+                <constraint firstItem="DZu-G6-ygz" firstAttribute="top" secondItem="MWX-w8-mOM" secondAttribute="bottom" id="B6M-JB-SoA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DZu-G6-ygz" secondAttribute="trailing" id="Mli-5e-vkN"/>
+                <constraint firstItem="DZu-G6-ygz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RQ7-Le-Rwy"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

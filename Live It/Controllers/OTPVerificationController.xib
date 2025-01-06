@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPVerificationController" customModule="Do_it_live" customModuleProvider="target">
+            <connections>
+                <outlet property="OTPFields" destination="yyV-q8-EkC" id="80s-m1-GSu"/>
+                <outlet property="errorLabel" destination="WBG-TA-8hj" id="kQB-Ts-NPn"/>
+                <outlet property="resendBtn" destination="Au6-Kq-6vY" id="XG0-yc-aFP"/>
+                <outlet property="timerLabel" destination="7Jj-FX-6Ii" id="pcO-HK-BEk"/>
+                <outlet property="titleLabel" destination="QwW-fP-FmT" id="Yb1-iS-ckl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwW-fP-FmT" customClass="AttributedLabel" customModule="Do_it_live" customModuleProvider="target">
+                    <rect key="frame" x="20" y="79" width="353" height="20.333333333333329"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyV-q8-EkC" customClass="OTPFieldView" customModule="OTPFieldView">
+                    <rect key="frame" x="8" y="124.33333333333331" width="377" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="xV6-I6-lpo"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C0j-2E-Aqd">
+                    <rect key="frame" x="16" y="214.33333333333334" width="357" height="20.333333333333343"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBG-TA-8hj" customClass="AdavanceLabel" customModule="Do_it_live" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="357" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jj-FX-6Ii">
+                    <rect key="frame" x="20" y="254.66666666666666" width="353" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Au6-Kq-6vY">
+                    <rect key="frame" x="20" y="295" width="46" height="30"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="C0j-2E-Aqd" firstAttribute="trailing" secondItem="QwW-fP-FmT" secondAttribute="trailing" id="5o2-zi-ZGe"/>
+                <constraint firstItem="Au6-Kq-6vY" firstAttribute="leading" secondItem="7Jj-FX-6Ii" secondAttribute="leading" id="GOi-pB-pRq"/>
+                <constraint firstItem="QwW-fP-FmT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="IES-gb-Dhp"/>
+                <constraint firstItem="C0j-2E-Aqd" firstAttribute="top" secondItem="yyV-q8-EkC" secondAttribute="bottom" constant="20" id="IXG-XY-2ec"/>
+                <constraint firstItem="7Jj-FX-6Ii" firstAttribute="top" secondItem="C0j-2E-Aqd" secondAttribute="bottom" constant="20" id="QCe-Tz-vib"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Au6-Kq-6vY" secondAttribute="bottom" constant="8" id="QSg-EW-2GS"/>
+                <constraint firstItem="Au6-Kq-6vY" firstAttribute="top" secondItem="7Jj-FX-6Ii" secondAttribute="bottom" constant="20" id="Quk-f4-V2G"/>
+                <constraint firstItem="C0j-2E-Aqd" firstAttribute="leading" secondItem="yyV-q8-EkC" secondAttribute="leading" constant="8" id="Tvt-fn-mtH"/>
+                <constraint firstItem="7Jj-FX-6Ii" firstAttribute="leading" secondItem="QwW-fP-FmT" secondAttribute="leading" id="W7W-gQ-uMO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yyV-q8-EkC" secondAttribute="trailing" constant="8" id="Z4q-sE-fsE"/>
+                <constraint firstItem="yyV-q8-EkC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="bsD-sJ-aIT"/>
+                <constraint firstItem="7Jj-FX-6Ii" firstAttribute="trailing" secondItem="C0j-2E-Aqd" secondAttribute="trailing" id="gkb-bq-sUz"/>
+                <constraint firstItem="yyV-q8-EkC" firstAttribute="top" secondItem="QwW-fP-FmT" secondAttribute="bottom" constant="25" id="hJ9-fk-50c"/>
+                <constraint firstItem="QwW-fP-FmT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ksj-Ec-eS2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QwW-fP-FmT" secondAttribute="trailing" constant="20" id="v9V-OZ-1nf"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="QwW-fP-FmT">
+            <size key="intrinsicContentSize" width="41.333333333333336" height="20.333333333333332"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

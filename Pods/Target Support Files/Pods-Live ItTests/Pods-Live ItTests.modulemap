@@ -1,0 +1,6 @@
+framework module Pods_Live_ItTests {
+  umbrella header "Pods-Live ItTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

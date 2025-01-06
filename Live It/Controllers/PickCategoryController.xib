@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickCategoryController" customModule="Do_it_live" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="UqD-Tv-6gr" id="fMu-wQ-BMs"/>
+                <outlet property="nextFillOutProfieBtn" destination="hni-IO-mOD" id="FlH-rA-iXB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hni-IO-mOD" customClass="LoadingButton" customModule="Do_it_live" customModuleProvider="target">
+                    <rect key="frame" x="20" y="738" width="353" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="oZ0-8X-E2s"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UqD-Tv-6gr">
+                    <rect key="frame" x="0.0" y="59" width="393" height="659"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2JB-nt-3IH">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="UqD-Tv-6gr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="9yE-Bo-v9K"/>
+                <constraint firstItem="UqD-Tv-6gr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ev8-HK-JSh"/>
+                <constraint firstItem="hni-IO-mOD" firstAttribute="top" secondItem="UqD-Tv-6gr" secondAttribute="bottom" constant="20" id="F3B-a6-4aH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UqD-Tv-6gr" secondAttribute="trailing" id="H7k-o5-Itu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hni-IO-mOD" secondAttribute="bottom" constant="25" id="Qna-LR-GNM"/>
+                <constraint firstItem="hni-IO-mOD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iyf-2b-sSz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hni-IO-mOD" secondAttribute="trailing" constant="20" id="lTv-QT-1Nt"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

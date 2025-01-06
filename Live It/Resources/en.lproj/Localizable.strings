@@ -1,0 +1,113 @@
+/* 
+  Localizable.strings
+  Live It
+
+  Created by Muniyaraj on 19/08/24.
+  
+*/
+
+"login" = "Login";
+"dont_have_ac" = "Don't have an account?";
+"signup" = "Signup";
+
+"spotlight_your_talent" = "Spotlight your talent";
+"grow_your_audience" = "Grow your audience and connect directly.Your stage, your crowd.";
+
+"start_instantly" = "Start instantly";
+"no_minimum_audience" = "No minimum audience required to begin your livestreaming journey.";
+
+"exclusive_access" = "Exclusive access";
+"getup_close_with_special" = "Get up close with special livestreaming experiences. Be more than just a viewer.";
+
+"discover_new_trends" = "Discover new trends";
+"unique_creators_diverse_content" = "Unique creators, diverse content.A new world at every click.";
+
+"monetize_your_way" = "Monetize your way";
+"choose_how_you_earn" = "Choose how you earn - subscriptions, live reactions, exclusive content, and live shopping.";
+
+"sign_up" = "Sign up";
+"alerady_have_ac" = "Already have an account?";
+
+"phone_or_email" = "Phone number or email address";
+"live_it" = "Live It";
+"happly_to_have_here" = "Happy to have you here! ";
+
+"enter_6_digit" = "Enter 6 digit code";
+"code_sent_to_num" = "Your code was sent to []";
+"resend_code" = "Resend code";
+"second" = "Second";
+"seconds" = "Seconds";
+"remain_to_resend" = "remaining to resend code";
+
+"confirm_birthday" = "Confirm your birthday";
+
+"continue" = "Continue";
+"date_of_birth" = "Date of birth";
+"confirm_dob" = "Confirm your date of birth";
+"yes_its_correct" = "Yes, this looks correct!";
+"need_make_changes" = "I need to make changes";
+
+"confirm_dob" = "Confirm date of birth";
+"confirm_dob_alert_msg" = "After Confirmation, you won't be able to change your date of birth";
+"cancel" = "Cancel";
+"you_must_18_or_older" = "You must be 18 or older to use our app";
+"by_verify_age" = "By verifying your age, you help us personalize your experience, maintain a safe community, and show you age-appropriate content. This will not be shown publicly.";
+
+"access_denied" = "Access denied";
+"our_community_guideliness" = "Our community guidelines require all users to be at least 13 years old. Unfortunately, you do not meet our age criteria.";
+
+"greeting_message" = "Welcome to the Vinivia experience!";
+"thanks_for_join_us" = "Thank you for joining us! Here, you'll find a world of content specially curated for you. Let's get started on your exciting journey!";
+
+"welcome_user" = "Welcome, []!";
+"congrats_verified_creator" = "Congrats, you're a verified creator on Vinivia! You are now part of our exclusive Creator community.Be sure to upload a profile photo to make sure your audience knows who you are!";
+
+"congrats_parts_of_community" = "Congrats, you're now part of our exclusive Creator community! Connect with an engaging audience & build your community!";
+
+"what_first_name" = "What's your first name?";
+"first_name" = "First name";
+"enter_your_name" = "Enter your name";
+"next_add_last_name" = "Next, add your last name";
+
+"what_last_name" = "What's your last name?";
+"last_name" = "Last name";
+"next_create_user_name" = "Next, create a username";
+
+"create_user_name" = "Create a username";
+"user_name" = "Username";
+"enter_user_name" = "Enter your user name";
+"next_upload_picture" = "Next, upload a picture";
+
+"name_must_contain_atleast_characters" = "[] must contain at least {} characters";
+"please_make_your_username_shorter" = "Please make your [] shorter.";
+"please enter_shorter_" = "Please enter a shorter [)";
+"cannot_contain_uppercase" = "[] cannot contain uppercase letters";
+"username_allowed_chars" = "Usernames can only use letters, numbers, underscores (_) and periods (.)";
+
+"personalize_profile" = "Personalize your profile";
+"express_yourself" = "Express yourself";
+"connect_authentically" = "Connect authentically with other people by uploading an awesome picture of yourself.";
+"next_follow_creator" = "Next, follow our creators";
+"upload_another_pic" = "Upload another picture";
+"fantastic" = "Fantastic!";
+"all_set_continue" = "You are all set to continue, ";
+"upload_picture" = "Upload picture";
+"later" = "Later";
+
+"save" = "Save";
+
+"follow_our_creator" = "Follow our creators";
+"follow_all" = "Follow all";
+"next_select_interest" = "Next, select your interests";
+"skip" = "Skip";
+
+"pick_categories_interest" = "Pick your categories of interest";
+"next_fill_profile" = "Next, fill out your profile";
+
+"select_your_interest" = "Select your interests";
+"choose_category_intro" = "Choose at least one content category to personalize your app experience and receive relevant content.";
+"seemore" = "See more";
+"seeless" = "See less";
+
+"follow" = "Follow";
+"unfollow" = "Unfollow";

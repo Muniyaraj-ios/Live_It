@@ -1,0 +1,146 @@
+//
+//  TabbarController.swift
+//  Live It
+//
+//  Created by Muniyaraj on 05/09/24.
+//
+
+import UIKit
+import os
+
+class TabbarController: BaseTabbarController {
+    
+    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: TabbarController.self))
+    
+    let homePage = TikTokHomePageViewController()
+    let searchPage = UIViewController()
+    let createPostPage = CreatorLiveStramController()
+    let inboxPage = UIViewController()
+    let profilePage = ProfileController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initalizeUI()
+    }
+    func initalizeUI(){
+
+        delegate = self
+        
+        homePage.tabBarItem = setupTabbarItem(.home)
+        
+        searchPage.tabBarItem = setupTabbarItem(.search)
+        
+        createPostPage.tabBarItem = setupTabbarItem(.create)
+        
+        inboxPage.tabBarItem = setupTabbarItem(.inbox)
+        
+        profilePage.tabBarItem = setupTabbarItem(.profile)
+        
+        //debugPrint("current language : \(localizeService?.currentLanguage.rawValue ?? "l")")
+        
+        /*Self.logger.log(level: .default, "logger default current language : \(self.localizeService?.currentLanguage.rawValue ?? "l")")
+        Self.logger.log(level: .debug, "logger debug current language : \(self.localizeService?.currentLanguage.rawValue ?? "l")")
+        Self.logger.log(level: .info, "logger info current language : \(self.localizeService?.currentLanguage.rawValue ?? "l")")
+        Self.logger.log(level: .error, "logger error current language : \(self.localizeService?.currentLanguage.rawValue ?? "l")")
+        Self.logger.log(level: .fault, "logger fault current language : \(self.localizeService?.currentLanguage.rawValue ?? "l")")*/
+        
+        let tabBarList = [homePage, searchPage, createPostPage, inboxPage, profilePage]
+        viewControllers = tabBarList.map{ UINavigationController(rootViewController: $0) }
+        
+        setupLang()
+    }
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        setupView()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    func setupView(){
+        guard let tabbarItem = TabbarItem(rawValue: selectedIndex) else{ return }
+        changeTabbarStyle(tabbarItem)
+        
+        tabBar.applyShadow()
+        
+        profilePage.localizeService = localizeService
+    }
+    override func setupLang() {
+        super.setupLang()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else{ return }
+            tabBar.semanticContentAttribute = localizeService?.currentLanguage == .arabic ? .forceRightToLeft : .forceLeftToRight
+        }
+    }
+    func setupTabbarItem(_ item_result: TabbarItem)-> UITabBarItem{
+        let item = item_result.result
+                
+        let normalImage = UIImage(named: item.image)
+        let selectedImage = UIImage(named: item.selectedImage)
+        
+        let customTab = UITabBarItem(title: item.name, image:  normalImage?.withRenderingMode(item.renderMode_normal), selectedImage: selectedImage?.withRenderingMode(item.renderMode_selected))
+        customTab.setTitleTextAttributes([NSAttributedString.Key.font: item.font], for: .normal)
+        customTab.setTitleTextAttributes([NSAttributedString.Key.font: item.font], for: .selected)
+        customTab.imageInsets = item.imageInset
+        customTab.tag = item_result.rawValue
+        return customTab
+    }
+}
+extension TabbarController: UITabBarControllerDelegate{
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard let tabBarItem = TabbarItem(rawValue: viewController.tabBarItem.tag) else{ return }
+        changeTabbarStyle(tabBarItem)
+    }
+    
+    fileprivate func changeTabbarStyle(_ tabBarItem: TabbarItem){
+        let BackgroundColor: UIColor
+        let TintColor: UIColor
+        let UnselectedTintColor: UIColor
+        
+        switch tabBarItem{
+            case .home,.create:
+                BackgroundColor = .black
+                TintColor = .PrimaryColor
+                UnselectedTintColor = .ButtonTextColor
+                break
+            case .search,.inbox,.profile:
+                BackgroundColor = .ButtonTextColor
+                TintColor = .PrimaryDarkColor_Only
+                UnselectedTintColor = .TextTeritaryColor
+                break
+        }
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: { [weak self] in
+            self?.tabBar.backgroundColor = BackgroundColor
+            self?.tabBar.tintColor = TintColor
+            self?.tabBar.unselectedItemTintColor = UnselectedTintColor
+        }, completion: nil)
+    }
+}
+
+
+enum TabbarItem:Int, CaseIterable{
+    case home = 0
+    case search = 1
+    case create = 2
+    case inbox = 3
+    case profile = 4
+    
+    var result: TabbarValues{
+        switch self {
+        case .home: return TabbarValues(name: "Home", image: "home", selectedImage: "home")
+        case .search: return TabbarValues(name: "Search", image: "search", selectedImage: "search")
+        case .create: return TabbarValues(name: nil, image: "create", selectedImage: "create",renderMode_normal: .alwaysOriginal,renderMode_selected: .alwaysOriginal,imageInset: UIEdgeInsets(top: -25, left: -6, bottom: 0, right: -6))
+        case .inbox: return TabbarValues(name: "Inbox", image: "inbox", selectedImage: "inbox")
+        case .profile: return TabbarValues(name: "Me", image: "profile", selectedImage: "profile_selected",renderMode_normal: .alwaysOriginal,renderMode_selected: .alwaysOriginal)
+        }
+    }
+}
+
+struct TabbarValues{
+    let name: String?
+    let image: String
+    let selectedImage: String
+    let font: UIFont = .customFont(style: .semiBold, size: 12)
+    var renderMode_normal: UIImage.RenderingMode = .alwaysTemplate
+    var renderMode_selected: UIImage.RenderingMode = .alwaysTemplate
+    var imageInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+}

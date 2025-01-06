@@ -1,0 +1,24 @@
+PODS:
+  - ActiveLabel (1.1.0)
+  - OTPFieldView (1.0.1)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - OTPFieldView
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - ActiveLabel
+    - OTPFieldView
+    - Toaster
+
+SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: 49b2e84ed47c934d418f1efeaf61e0d1a8c5794d
+
+COCOAPODS: 1.15.2
