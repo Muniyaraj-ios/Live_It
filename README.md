@@ -58,12 +58,11 @@ _Add some screenshots here (e.g., the home page, signup screen, custom gallery).
 ## Installation
 
 1. Clone the repository.
-2. Open `Live_It.xcodeproj` in Xcode.
+2. Open `Live It.xcworkspace` in Xcode.
 3. Run the app on an iOS simulator or device.
 
 ---
 
 ## Future Enhancements
 - Push notifications for trending videos.
-- Dark mode support.
 - Enhanced personalization using ML recommendations.
