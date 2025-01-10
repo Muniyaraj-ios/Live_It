@@ -54,7 +54,7 @@
 
 ### App Demo:
 <p align="left">
-    <video alt="App Screenshots" src="https://user-images.githubusercontent.com/12906999/207588049-d5c4123f-d9c8-4f78-9733-9313f2c7e746.mp4"> </p>
+    <video alt="App Screenshots" src="https://raw.githubusercontent.com/Muniyaraj-ios/assets/main/live_it_onboard_page_ui_design.mp4"> </p>
 
 ---
 
