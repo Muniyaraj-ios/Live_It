@@ -63,10 +63,10 @@ final class OTPVerificationController: BaseController {
         OTPFields.fieldFont = .customFont(style: .regular, size: 16)
         OTPFields.shouldAllowIntermediateEditing = false
         
-        let size = (OTPFields.frame.size.width / OTP_fieldCount) - 22
+        let size = (OTPFields.frame.size.width / OTP_fieldCount) - 24
         print("size : \(size)")
         OTPFields.fieldSize = size
-        OTPFields.separatorSpace = 20
+        OTPFields.separatorSpace = 18
         
         OTPFields.delegate = self
         OTPFields.initializeUI()
@@ -95,8 +95,8 @@ final class OTPVerificationController: BaseController {
             resendBtn.setTitle(resend_codeText, for: .disabled)
             errorLabel.imageIndex = localizeService?.currentLanguage == .arabic ? 1 : 0
             
-            view.updateTextAlignment(for: localizeService)
-            //OTPFields.updateTextAlignment(for: localizeService)
+            view.updateTextAlignment(for: localizeService, isfromOTP: true)
+//            OTPFields.updateTextAlignment(for: localizeService)
         }
     }
     private func setupFont(){
@@ -106,6 +106,10 @@ final class OTPVerificationController: BaseController {
         resendBtn.titleLabel?.font = .customFont(style: .semiBold, size: 15)
     }
     private func navigationAction(){
+        countTimer?.invalidate()
+        countTimer = nil
+        resendBtn.isEnabled = true
+        isTimerRunning = false
         let dobController = DateofBirthController()
         navigationController?.pushToController(dobController, languageService: localizeService)
     }
@@ -151,7 +155,7 @@ extension OTPVerificationController: OTPFieldViewDelegate{
 extension OTPVerificationController{
     
     private func startTimer(){
-        remainingSeconds = 5
+        remainingSeconds = 50
         timing_update = remainingSeconds
         resendBtn.isEnabled = false
         isTimerRunning = true

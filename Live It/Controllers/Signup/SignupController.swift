@@ -61,13 +61,6 @@ final class SignupController: BaseController {
         signupView.textFieldHeight = 55
         
         logoView.image = UIImage(named: "logo")
-        
-        #if DEBUG
-        signupView.textField.text = "Muniyaraj@gmail.com"
-        loginBtn.EnableButton()
-        #else
-        loginBtn.disbleButton()
-        #endif
     }
     private func setupConstrainats(){
         
@@ -93,6 +86,10 @@ final class SignupController: BaseController {
             
             titleLabel.titleText = "live_it".localized(using: localizeService)
             titleLabel.subTitleText = "happly_to_have_here".localized(using: localizeService)
+            
+            let currentString = signupView.textField.text ?? ""
+            let isValid = validateEmailPhone(currentString)
+            isValid ? loginBtn.EnableButton() : loginBtn.disbleButton()
             
             view.updateTextAlignment(for: localizeService)
         }
@@ -143,8 +140,9 @@ final class SignupController: BaseController {
         }
     }
     private func navigationOnOTP_Page(){
-        guard let text = signupView.textField.text,(text == "Muniyaraj@gmail.com" || text == "1234567890") else{
-            signupView.errorText = "We could not find an account linked to this email address"
+        let textfield_text = signupView.textField.text
+        guard let text = textfield_text,(text == "muniyaraj@gmail.com" || text == "9876543210") else{
+            signupView.errorText = "We could not find an account linked to this " +  (textfield_text!.isValidEmail() ? "email address" : "phone number")
             signupView.throwError = true
             signupView.headLabel.textAlignment = localizeService?.currentLanguage == .arabic ? .right : .left
             signupView.errorLabel.textAlignment = localizeService?.currentLanguage == .arabic ? .right : .left

@@ -45,7 +45,7 @@ final class AddPersonalInfoController: BaseController {
         observeNotification()
     }
     private func setupView(){
-        
+        nameFieldView.textField.returnKeyType = .done
     }
     private func setupTheme(){
         

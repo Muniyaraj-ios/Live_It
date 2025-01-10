@@ -39,7 +39,7 @@ final class LanguageManager: LocalizationService{
     }
     
     private var bundleCache: [String: Bundle] = [:]
-    private let cacheQueue = DispatchQueue(label: "com.doitlive.localization.cacheQueue", attributes: .concurrent)
+    private let cacheQueue = DispatchQueue(label: "com.liveit.localization.cacheQueue", attributes: .concurrent)
     // DispatchQueue to ensure that only one thread can modify the bundleCache at a time, while still allowing multiple threads to read from it concurrently:
     
     init(bundle: Bundle? = nil, languageCode: LanguageCodes) {
@@ -135,7 +135,7 @@ extension String{
 
 extension UIView {
     
-    func updateTextAlignment(for service_: LocalizationService?) {
+    func updateTextAlignment(for service_: LocalizationService?, isfromOTP: Bool = false) {
         let service = service_
         let isRTL = service?.currentLanguage == .arabic
         let semanticAttribute: UISemanticContentAttribute = isRTL ? .forceRightToLeft : .forceLeftToRight
@@ -144,7 +144,7 @@ extension UIView {
             return
         }else*/
         if let textField = self as? UITextField {
-            textField.textAlignment = isRTL ? .right : .left
+            textField.textAlignment = isfromOTP ? .center : isRTL ? .right : .left
         } else if let textView = self as? UITextView {
             textView.textAlignment = isRTL ? .right : .left
         } else if let label = self as? UILabel {
@@ -158,6 +158,6 @@ extension UIView {
         }
         
         // Recursively apply to subviews
-        subviews.forEach { $0.updateTextAlignment(for: service) }
+        subviews.forEach { $0.updateTextAlignment(for: service, isfromOTP: isfromOTP) }
     }
 }

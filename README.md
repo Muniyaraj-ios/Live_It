@@ -51,7 +51,10 @@
 
 ## Screenshots
 
-_Add some screenshots here (e.g., the home page, signup screen, custom gallery)._
+
+### App Demo:
+<p align="left">
+    <video alt="App Screenshots" src="https://user-images.githubusercontent.com/12906999/207588049-d5c4123f-d9c8-4f78-9733-9313f2c7e746.mp4"> </p>
 
 ---
 
